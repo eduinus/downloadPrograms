@@ -1,5 +1,6 @@
 -- This program downloads /updates programs from my github repositories.
--- To download it run "wget 'http://pastebin.com/download.php?i=G61bgv29' /bin/hello.lua"
+-- To download it run "wget -f 'http://pastebin.com/download.php?i=G61bgv29' /bin/hello.lua"
+-- wget [-f] <download url> <path to the new file + filename>
 
 programs = {}
 programs[1] = {"refuel.lua", "Ey7PuYJ5"}
