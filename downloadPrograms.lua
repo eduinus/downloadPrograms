@@ -1,5 +1,5 @@
--- this program downloads/updates all of my important programs and files in the current directory
--- pastebin get shCjG4FE downloadPrograms.lua
+-- This program downloads /updates programs from my github repositories.
+-- To download it run "wget 'http://pastebin.com/download.php?i=G61bgv29' /bin/hello.lua"
 
 programs = {}
 programs[1] = {"refuel.lua", "Ey7PuYJ5"}
