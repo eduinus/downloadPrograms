@@ -1,19 +1,14 @@
--- This program downloads /updates programs from my github repositories.
--- To download it run "wget -f 'http://pastebin.com/download.php?i=G61bgv29' /bin/hello.lua"
+-- This program downloads / updates programs from my github repositories into the current directory.
+-- wget -f 'https://raw.githubusercontent.com/eduinus/downloadPrograms/master/downloadPrograms.lua' downloadPrograms.lua"
 -- wget [-f] <download url> <path to the new file + filename>
 
-programs = {}
-programs[1] = {"refuel.lua", "Ey7PuYJ5"}
-programs[2] = {"tower.csv", "D1zKyGfA"}
-programs[3] = {"builder.lua", "EyhBbj77"}
-programs[4] = {"plantFarm.lua", "uYYMNEA2"}
-programs[5] = {"harvestFarm.lua", "p0QmVs7Y"}
-programs[6] = {"buildFarm.lua","X7nWKCL9"}
-programs[7] = {"downloadPrograms.lua", "shCjG4FE"}
-programs[8] = {"waller.lua", "0XcTrFTm"}
-programs[9] = {"towerCoords.csv", "CA52c0w9"}
-programs[10] = {"build.lua", "ADjcdXmX"}
-programs[11] = {"dig2.lua", "bEQ4b4rS"}
+repos = {}
+repos[1] = {"downloadPrograms","/downloadPrograms.lua"}
+repos[2] = {"dig2","/dig2.lua"}
+repos[3] = {"builder","/builder.lua","/schematics/johnTower.csv","/schematics/wallTower.csv"}
+repos[4] = {"waller","/waller.lua","/towerCoordinates.csv"}
+repos[5] = {"farming","/buildFarm.lua","/harvestFarm.lua","/plantFarm.lua"}
+repos[6] = {"railer","/railer.lua"}
 
 function tableLength(table)
   count = 1
@@ -23,6 +18,12 @@ function tableLength(table)
   return count-1
 end
 
-for i=1, tableLength(programs) do 
-  os.execute("pastebin get -f "..programs[i][2].." "..programs[i][1])
+for repoI=1, tableLength(repos) do 
+  os.execute("wget -f https://raw.githubusercontent.com/eduinus/"..repos[repoI][1].."/master/README.md /README.md")
+  for fileI=2, tableLength(repos[repoI]) do
+    os.execute("wget -f https://raw.githubusercontent.com/eduinus/"..repos[repoI][1].."/master"..repos[repoI][fileI].." "..repos[repoI][fileI])
+  end
+  get "/README.md"
+  only update one program?
+  clear directory?
 end
