@@ -27,7 +27,7 @@ function search(table,term)
   return false
 end
 
-print("Download All?:         (Y/[Specific Repo]")
+print("Download All?:         (Y or [Specific Repo])")
 target = io.read()
   
 if target == "y" or target == "Y" then
