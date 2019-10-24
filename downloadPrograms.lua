@@ -39,7 +39,7 @@ if target == "y" or target == "Y" then
   end
 elseif search(repos,target) ~= false then
   os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..target.."/master/README.md' /README.md")
-  for fileI=2, tableLength(repos[repoI]) do
+  for fileI=2, tableLength(repos[search(repos,target)]) do
     os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..target.."/master"..repos[search(repos,target)][fileI].."' "..repos[search(repos,target)][fileI])
   end
 else
