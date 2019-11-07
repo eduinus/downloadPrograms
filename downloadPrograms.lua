@@ -1,5 +1,5 @@
 -- This program downloads / updates programs from my github repositories into the current directory.
--- wget -f 'https://raw.githubusercontent.com/eduinus/downloadPrograms/master/downloadPrograms.lua' downloadPrograms.lua"
+-- wget -f 'https://raw.githubusercontent.com/eduinus/downloadPrograms/master/downloadPrograms.lua' "downloadPrograms.lua"
 -- wget [-f] <download url> <path to the new file + filename>
 
 repos = {}
