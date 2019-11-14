@@ -34,7 +34,7 @@ target = io.read()
 if target == "y" or target == "Y" then
   for repoI=1, tableLength(repos) do
     pcall(os.execute("mkdir "..repos[repoI][1])) term.clearLine()
-    if repoI == 3 then os.execute("mkdir /builder/schematics/") end term.clearLine()
+    if repoI == 3 then os.execute("mkdir builder/schematics") end term.clearLine()
     
     os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..repos[repoI][1].."/master/README.md' "..repos[repoI][1].."/README.md")
     for fileI=2, tableLength(repos[repoI]) do
@@ -43,7 +43,7 @@ if target == "y" or target == "Y" then
   end
 elseif search(repos,target) ~= false then
   pcall(os.execute("mkdir "..repos[repoI][1])) term.clearLine()
-  if repoI == 3 then os.execute("mkdir /builder/schematics/") end term.clearLine()
+  if repoI == 3 then os.execute("mkdir builder/schematics") end term.clearLine()
   
   os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..target.."/master/README.md' "..repos[repoI][1].."/README.md")
   for fileI=2, tableLength(repos[search(repos,target)]) do
