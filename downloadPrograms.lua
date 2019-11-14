@@ -47,8 +47,8 @@ elseif search(repos,target) ~= false then
   if repoX == 3 then os.execute("mkdir builder/schematics") end os.execute("clear")
   
   os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..target.."/master/README.md' "..repos[repoX][1].."/README.md")
-  for fileI=2, tableLength(repos[search(repos,target)]) do
-    os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..target.."/master"..repos[search(repos,target)][fileI].."' "..repos[search(repos,target)][1]..repos[search(repos,target)][fileI])
+  for fileI=2, tableLength(repos[repoX]) do
+    os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..target.."/master"..repos[repoX][fileI].."' "..repos[repoX][1]..repos[search(repos,target)][fileI])
   end
 else
   print("No such program found.")
