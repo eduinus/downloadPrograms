@@ -9,6 +9,7 @@ repos[3] = {"builder","/builder.lua","/schematics/johnTower.csv","/schematics/wa
 repos[4] = {"waller","/waller.lua","/towerCoordinates.csv"}
 repos[5] = {"farming","/buildFarm.lua","/harvestFarm.lua","/plantFarm.lua"}
 repos[6] = {"railer","/railer.lua"}
+repos[7] = {"inventoryManager","/inventoryServer.lua","/inventoryViewer.lua"}
 
 function tableLength(table)
   count = 1
