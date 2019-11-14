@@ -42,7 +42,7 @@ if target == "y" or target == "Y" then
     end
   end
 elseif search(repos,target) ~= false then
-  search(repos,target) = repoX
+  repoX = search(repos,target)
   pcall(os.execute("mkdir "..repos[repoX][1])) os.execute("clear")
   if repoX == 3 then os.execute("mkdir builder/schematics") end os.execute("clear")
   
