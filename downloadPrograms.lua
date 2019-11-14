@@ -2,6 +2,9 @@
 -- wget -f 'https://raw.githubusercontent.com/eduinus/downloadPrograms/master/downloadPrograms.lua' "downloadPrograms.lua"
 -- wget [-f] <download url> <path to the new file + filename>
 
+local component = require("term")
+local term = component.term
+
 repos = {}
 repos[1] = {"downloadPrograms","/downloadPrograms.lua"}
 repos[2] = {"dig2","/dig2.lua"}
