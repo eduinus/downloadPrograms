@@ -34,15 +34,15 @@ target = io.read()
 if target == "y" or target == "Y" then
   for repoI=1, tableLength(repos) do
     os.execute("mkdir "..repos[repoI][1])
-    os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..repos[repoI][1].."/master/README.md' /"..repos[repoI][1].."/README.md")
+    os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..repos[repoI][1].."/master/README.md' "..repos[repoI][1].."/README.md")
     for fileI=2, tableLength(repos[repoI]) do
-      os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..repos[repoI][1].."/master"..repos[repoI][fileI].."' /"..repos[repoI][1]..repos[repoI][fileI])
+      os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..repos[repoI][1].."/master"..repos[repoI][fileI].."' "..repos[repoI][1]..repos[repoI][fileI])
     end
   end
 elseif search(repos,target) ~= false then
-  os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..target.."/master/README.md' /"..repos[repoI][1].."/README.md")
+  os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..target.."/master/README.md' "..repos[repoI][1].."/README.md")
   for fileI=2, tableLength(repos[search(repos,target)]) do
-    os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..target.."/master"..repos[search(repos,target)][fileI].."' /"..repos[search(repos,target)][1]..repos[search(repos,target)][fileI])
+    os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..target.."/master"..repos[search(repos,target)][fileI].."' "..repos[search(repos,target)][1]..repos[search(repos,target)][fileI])
   end
 else
   print("No such program found.")
