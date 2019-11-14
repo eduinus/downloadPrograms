@@ -42,10 +42,11 @@ if target == "y" or target == "Y" then
     end
   end
 elseif search(repos,target) ~= false then
-  pcall(os.execute("mkdir "..repos[repoI][1])) os.execute("clear")
-  if repoI == 3 then os.execute("mkdir builder/schematics") end os.execute("clear")
+  search(repos,target) = repoX
+  pcall(os.execute("mkdir "..repos[repoX][1])) os.execute("clear")
+  if repoX == 3 then os.execute("mkdir builder/schematics") end os.execute("clear")
   
-  os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..target.."/master/README.md' "..repos[repoI][1].."/README.md")
+  os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..target.."/master/README.md' "..repos[repoX][1].."/README.md")
   for fileI=2, tableLength(repos[search(repos,target)]) do
     os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..target.."/master"..repos[search(repos,target)][fileI].."' "..repos[search(repos,target)][1]..repos[search(repos,target)][fileI])
   end
