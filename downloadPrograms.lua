@@ -2,9 +2,6 @@
 -- wget -f 'https://raw.githubusercontent.com/eduinus/downloadPrograms/master/downloadPrograms.lua' "downloadPrograms.lua"
 -- wget [-f] <download url> <path to the new file + filename>
 
-local component = require("term")
-local term = component.term
-
 repos = {}
 repos[1] = {"downloadPrograms","/downloadPrograms.lua"}
 repos[2] = {"dig2","/dig2.lua"}
@@ -36,8 +33,8 @@ target = io.read()
   
 if target == "y" or target == "Y" then
   for repoI=1, tableLength(repos) do
-    pcall(os.execute("mkdir "..repos[repoI][1])) term.clearLine()
-    if repoI == 3 then os.execute("mkdir builder/schematics") end term.clearLine()
+    pcall(os.execute("mkdir "..repos[repoI][1])) os.execute("clear")
+    if repoI == 3 then os.execute("mkdir builder/schematics") end os.execute("clear")
     
     os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..repos[repoI][1].."/master/README.md' "..repos[repoI][1].."/README.md")
     for fileI=2, tableLength(repos[repoI]) do
@@ -45,8 +42,8 @@ if target == "y" or target == "Y" then
     end
   end
 elseif search(repos,target) ~= false then
-  pcall(os.execute("mkdir "..repos[repoI][1])) term.clearLine()
-  if repoI == 3 then os.execute("mkdir builder/schematics") end term.clearLine()
+  pcall(os.execute("mkdir "..repos[repoI][1])) os.execute("clear")
+  if repoI == 3 then os.execute("mkdir builder/schematics") end os.execute("clear")
   
   os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..target.."/master/README.md' "..repos[repoI][1].."/README.md")
   for fileI=2, tableLength(repos[search(repos,target)]) do
