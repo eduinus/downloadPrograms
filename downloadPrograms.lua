@@ -33,7 +33,7 @@ target = io.read()
   
 if target == "y" or target == "Y" then
   for repoI=1, tableLength(repos) do
-    os.execute("mkdir "..repos[repoI][1])
+    pcall(os.execute("mkdir "..repos[repoI][1])) -- make this quiet
     os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..repos[repoI][1].."/master/README.md' "..repos[repoI][1].."/README.md")
     for fileI=2, tableLength(repos[repoI]) do
       os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..repos[repoI][1].."/master"..repos[repoI][fileI].."' "..repos[repoI][1]..repos[repoI][fileI])
