@@ -41,6 +41,8 @@ if target == "y" or target == "Y" then
       os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..repos[repoI][1].."/master"..repos[repoI][fileI].."' "..repos[repoI][1]..repos[repoI][fileI])
     end
   end
+os.execute("clear")
+print("Updated all repos.")
 elseif search(repos,target) ~= false then
   repoX = search(repos,target)
   pcall(os.execute("mkdir "..repos[repoX][1])) os.execute("clear")
@@ -50,6 +52,8 @@ elseif search(repos,target) ~= false then
   for fileI=2, tableLength(repos[repoX]) do
     os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..target.."/master"..repos[repoX][fileI].."' "..repos[repoX][1]..repos[search(repos,target)][fileI])
   end
+os.execute("clear")
+print("Updated "..repos..".")
 else
   print("No such program found.")
   return
