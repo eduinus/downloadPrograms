@@ -3,13 +3,14 @@
 -- wget [-f] <download url> <path to the new file + filename>
 
 repos = {}
-repos[1] = {"downloadPrograms","/downloadPrograms.lua"}
-repos[2] = {"dig2","/dig2.lua"}
+repos[1] = {"repoDownloader","/repoDownloader.lua"}
+repos[2] = {"superDigger","/superDigger.lua"}
 repos[3] = {"builder","/builder.lua","/schematics/johnTower.csv","/schematics/wallTower.csv"}
 repos[4] = {"waller","/waller.lua","/towerCoordinates.csv"}
-repos[5] = {"farming","/buildFarm.lua","/harvestFarm.lua","/plantFarm.lua"}
+repos[5] = {"farmer","/buildFarm.lua","/harvestFarm.lua","/plantFarm.lua"}
 repos[6] = {"railer","/railer.lua"}
 repos[7] = {"inventoryManager","/inventoryServer.lua","/inventoryViewer.lua"}
+repos[8] = {"droner","/droneBios.lua","/droneServer.lua"}
 
 function tableLength(table)
   count = 1
