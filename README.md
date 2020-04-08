@@ -1,2 +1,2 @@
-# downloadPrograms
-downloads important programs to an opencomputers robot
+# repoDownloader
+Downloads all my important programs to an opencomputers robot
