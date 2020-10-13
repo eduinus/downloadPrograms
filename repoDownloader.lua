@@ -56,11 +56,11 @@ elseif search(repos,target) ~= false then
     os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..target.."/master"..repos[repoX][fileI].."' "..repos[repoX][1]..repos[search(repos,target)][fileI])
   end
 os.execute("clear")
-print("Updated "..target..".")
+print("Updated "..target.." repo.")
 os.sleep(1)
 os.execute("clear")
 else
-  print("No such program found.")
+  print("No such repo found.")
   os.sleep(1)
   os.execute("clear")
   return
