@@ -44,6 +44,8 @@ if target == "y" or target == "Y" then
   end
 os.execute("clear")
 print("Updated all repos.")
+os.sleep(1)
+os.execute("clear")
 elseif search(repos,target) ~= false then
   repoX = search(repos,target)
   pcall(os.execute("mkdir "..repos[repoX][1])) os.execute("clear")
@@ -54,8 +56,12 @@ elseif search(repos,target) ~= false then
     os.execute("wget -f 'https://raw.githubusercontent.com/eduinus/"..target.."/master"..repos[repoX][fileI].."' "..repos[repoX][1]..repos[search(repos,target)][fileI])
   end
 os.execute("clear")
-print("Updated "..repos..".")
+print("Updated "..target..".")
+os.sleep(1)
+os.execute("clear")
 else
   print("No such program found.")
+  os.sleep(1)
+  os.execute("clear")
   return
 end
