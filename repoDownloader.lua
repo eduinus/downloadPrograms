@@ -9,7 +9,7 @@ repos[3] = {"builder","/builder.lua","/schematics/johnTower.csv","/schematics/wa
 repos[4] = {"waller","/waller.lua","/towerCoordinates.csv"}
 repos[5] = {"farmer","/buildFarm.lua","/harvestFarm.lua","/plantFarm.lua"}
 repos[6] = {"railer","/railer.lua"}
-repos[7] = {"inventoryManager","/inventoryServer.lua"}
+repos[7] = {"inventoryManager","/inventoryServer.lua","/inventoryTerminal.lua","/inventoryRelay.lua"}
 repos[8] = {"droner","/droneBios.lua","/droneServer.lua"}
 
 function tableLength(table)
